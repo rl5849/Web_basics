@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<meta charset="ISO-8859-1">
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+<head>
+	<style>
+	body {
+		background-color: orange; 
+	}
+	</style>
+
+</head>
+<body>
+	<center>
+	<div ng-app="test" ng-controller="testCtrl">
+	<h1>{{Hello}}</h1>
+	
+	<img src="https://images.sk-static.com/images/media/profile_images/artists/7514479/huge_avatar"><br>
+	<a href="https://images.sk-static.com/images/media/profile_images/artists/7514479/huge_avatar">Link to another page! (The image source)</a><br>
+	<a href="page2.html">Click here to go to the next page</a><br>
+	{{about_me}}	
+	</div>
+	</center>
+	<script>
+	var app = angular.module('test', []);
+	app.controller('testCtrl', function($scope){
+		$scope.Hello="Hello World!, from angular";
+		$scope.about_me="ABOUT ME";
+	});
+	</script>
+
+</body>
+</html>
